@@ -1,0 +1,11 @@
+{
+  "name": "HIGHER Performance",
+  "description": "HIGHER Technology's Human Performance Survey",
+  "addons": ["heroku-postgresql:hobby-dev"],
+  "env": {
+    "RAILS_ENV": "production"
+  },
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate"
+  }
+}

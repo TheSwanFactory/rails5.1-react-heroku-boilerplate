@@ -1,0 +1,60 @@
+// HIGHER Technology colors and fonts
+
+$light-text-color:           #a0a0a0;
+$quote-text-color:           #f27a00;
+$disclosure-text-color:      #ed7c06;
+
+$thick-border:               8px solid black;
+$dotted-border:              1px dotted #999999;
+
+$header-background-color:    #f07c05;
+$paging-background-color:    black;
+$unfocused-background-color: #f1f0ec;
+$quote-background-color:     #f1f0ec;
+
+$text-color:     #007b8a;
+$font-options: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-weight: 200;
+$content-size: 16px;
+
+$body-width: 60%;
+$logo-size: 32px;
+$logo-padding: 16px;
+
+body {
+  width: $body-width;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-family: $font-options;
+  font-weight: $font-weight;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  #masthead {
+    padding: $logo-padding;
+    img {
+      height: $logo-size;
+      width: $logo-size;
+    }
+    .caption {
+      font-size: $logo-size;
+      a {
+        color: $text-color;
+        text-decoration: none;
+      }
+    }
+  }
+  #content a {
+    font-size: $content-size;
+    font-color: $text-color;
+    text-decoration: none;
+  }
+  thead th {
+    color: white;
+    background: $text-color;
+  }
+}
+h1 {
+  color: $text-color;
+  text-align: center;
+}

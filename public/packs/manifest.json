@@ -1,0 +1,8 @@
+{
+  "app.js": "http://localhost:8080/packs/app.js",
+  "app.js.map": "http://localhost:8080/packs/app.js.map",
+  "application.js": "http://localhost:8080/packs/application.js",
+  "application.js.map": "http://localhost:8080/packs/application.js.map",
+  "hello_react.js": "http://localhost:8080/packs/hello_react.js",
+  "hello_react.js.map": "http://localhost:8080/packs/hello_react.js.map"
+}

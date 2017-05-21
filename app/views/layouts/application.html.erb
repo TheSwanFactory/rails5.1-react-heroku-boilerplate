@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HIGHER Performance</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'app', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div id="masthead">
+      <span class="logo">
+          <%= image_tag("higher-logo.jpg", :alt => "HIGHER Technology logo") %>
+      </span>
+      <span class="caption">
+        <%= link_to 'HIGHER Technology', root_path %>
+      </span>
+    </div>
+    <%= yield %>
+  </body>
+</html>
