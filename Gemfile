@@ -39,7 +39,6 @@ gem 'omniauth-facebook'
 gem 'omniauth-google'
 
 gem 'activeadmin', github: 'activeadmin'
-gem 'rapidfire', :git => 'https://github.com/TheHigher/rapidfire.git'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
