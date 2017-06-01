@@ -12,24 +12,29 @@ It also demonstrates how to use a [Postgres](http://exponential.io/blog/2015/02/
 
 # Prerequisites
 
-* Ruby 2.4 (we recommend you install it via [RVM](https://rvm.io))
+* The latest Ruby e.g., 2.4 (we recommend you install it via [RVM](https://rvm.io))
 * A package manager (we use [Homebrew](https://brew.sh) on the Mac)
 * A [free Heroku account](https://signup.heroku.com)
 * The [Heroku command-line](https://devcenter.heroku.com/articles/heroku-cli)
 
 # System Installation
 
-* brew install node
-* brew install yarn
-* yarn install -g node-gyp
-* bundle install
-
+```
+$ brew install node
+$ brew install yarn
+$ yarn install -g node-gyp
+$ bundle install
+```
 # Database Creation
 
-* brew install postgresql
-* # Follow instructions to auto-launch postgresql
-* export DATABASE_URL="postgres://username:MY_PASSWORD@localhost/boilerplate_db"
-* rake db:create db:migrate db:setup
+```
+$ brew install postgresql
+# Follow instructions to auto-launch postgresql
+$ export DATABASE_URL="postgres://appuser:MY_PASSWORD@localhost/boilerplate_db"
+$ initdb /usr/local/var/postgres -E utf8 -U appuser # May vary if not Homebrew
+$ rake db:create db:migrate db:setup
+```
+Note that you may need to manually create the Postgres database or initial user.
 
 # Launch
 
