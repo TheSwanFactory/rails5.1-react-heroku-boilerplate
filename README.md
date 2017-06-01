@@ -24,6 +24,7 @@ $ brew install node
 $ brew install yarn
 $ yarn install -g node-gyp
 $ bundle install
+$ yarn install
 ```
 # Database Creation
 
@@ -37,21 +38,23 @@ $ rake db:create db:migrate db:setup
 Note that you may need to manually create the Postgres database or initial user.
 
 # Launch
-
-* rake test
-* bin/webpack-dev-server &
-* rails server &
-* open [http://localhost:3000](http://localhost:3000)
-*
-* heroku buildpacks:add --index 1 heroku/nodejs
-* heroku buildpacks:add heroku/ruby
+```
+$ rake test
+$ bin/webpack-dev-server &
+$ rails server &
+$ open [http://localhost:3000](http://localhost:3000)
+$
+$ heroku buildpacks:add --index 1 heroku/nodejs
+$ heroku buildpacks:add heroku/ruby
+```
 
 # Troubleshoot
-*
-* rake webpacker:verify_install
-* rake webpacker:check_node
-* rake webpacker:check_yarn
-* rake webpacker:install:react
-* rake webpacker:yarn_install
-* rake webpacker:compile
-* rake assets:precompile
+```
+$ rake --tasks
+$ rake webpacker:verify_install
+$ rake webpacker:check_node
+$ rake webpacker:check_yarn
+$ rake webpacker:install:react
+$ rake webpacker:yarn_install
+$ rake webpacker:compile
+```
