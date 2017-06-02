@@ -40,6 +40,7 @@ Note that you may need to manually create the Postgres database or initial user.
 # Launch
 ```
 $ rake test
+$ rake webpacker:compile
 $ bin/webpack-dev-server &
 $ rails server &
 $ open [http://localhost:3000](http://localhost:3000)
@@ -56,5 +57,4 @@ $ rake webpacker:check_node
 $ rake webpacker:check_yarn
 $ rake webpacker:install:react
 $ rake webpacker:yarn_install
-$ rake webpacker:compile
 ```
