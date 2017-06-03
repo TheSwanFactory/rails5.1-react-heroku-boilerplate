@@ -1,18 +1,21 @@
 {
-  "author": "https://github.com/GiancarlosIO",
-  "name": "rails-5.1-react-boilerplate",
-  "private": true,
-  "description": "Simple boilerplate for rails v-5.1 and react v-15.5.4",
+  "author": "https://github.com/DrErnie",
+  "name": "rails-5.1-react-heroku-boilerplate",
+  "private": false,
+  "description": "Template for running Rails 5.1 and React on Heroku",
   "license": "ISC",
-  "repository": "",
-  "version": "1.0.0",
+  "repository": "https://github.com/TheSwanFactory/rails5.1-react-heroku-boilerplate",
+  "version": "0.1.0",
   "engines": {
     "node": "7.10.0",
     "npm": "4.2.0"
   },
   "keywords": [
+    "Postgres",
+    "Heroku",
     "react",
     "webpack",
+    "yarn",
     "JavaScript",
     "Ruby",
     "on",

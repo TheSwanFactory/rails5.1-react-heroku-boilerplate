@@ -1,6 +1,6 @@
 {
-  "name": "HIGHER Performance",
-  "description": "HIGHER Technology's Human Performance Survey",
+  "name": "rails-5.1-react-heroku-boilerplate",
+  "description": "Template for running Rails 5.1 and React on Heroku",
   "addons": ["heroku-postgresql:hobby-dev"],
   "env": {
     "RAILS_ENV": "production"
