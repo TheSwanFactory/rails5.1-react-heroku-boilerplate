@@ -28,10 +28,12 @@ $ yarn install
 ```
 # Database Creation
 
+You shoud specify your own `appuser`, `PASSWORD`, and `dbname`.
+
 ```
 $ brew install postgresql
 # Follow instructions to auto-launch postgresql
-$ export DATABASE_URL="postgres://appuser:MY_PASSWORD@localhost/boilerplate_db"
+$ export DATABASE_URL="postgres://appuser:PASSWORD@localhost/dbname"
 $ initdb /usr/local/var/postgres -E utf8 -U appuser # May vary if not Homebrew
 $ rake db:create db:migrate db:setup
 ```
@@ -48,6 +50,9 @@ $
 $ heroku buildpacks:add --index 1 heroku/nodejs
 $ heroku buildpacks:add heroku/ruby
 ```
+# Personalize
+
+To use this for your own application
 
 # Troubleshoot
 ```
