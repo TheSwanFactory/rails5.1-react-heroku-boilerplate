@@ -1,16 +1,17 @@
 {
   "author": "https://github.com/DrErnie",
-  "name": "rails-5.1-react-heroku-boilerplate",
+  "name": "MyRailsReactApp",
   "private": false,
-  "description": "Template for running Rails 5.1 and React on Heroku",
+  "description": "Run MyRailsReactApp on Heroku",
   "license": "ISC",
-  "repository": "https://github.com/TheSwanFactory/rails5.1-react-heroku-boilerplate",
+  "repository": "",
   "version": "0.1.0",
   "engines": {
     "node": "7.10.0",
     "npm": "4.2.0"
   },
   "keywords": [
+    "MyRailsReactApp",
     "Postgres",
     "Heroku",
     "react",

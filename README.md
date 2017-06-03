@@ -1,14 +1,26 @@
 # Rails-5.1 React Heroku Boilerplate
+## Created June, 2017
+### @DrErnie • TheSwanFactory
 
 [Rails 5.1](https://medium.com/@hpux/rails-5-1-loves-javascript-a1d84d5318b) breaks new ground in provided integrated support for JavaScript within a Ruby on Rails application.  However, that support comes with additional complexity and changes from prior ways of managing JavaScript.
 
+To help you get used to that new way of doing things, this boilerplate "batteries included" application demonstrates how to build and deploy a complete modern, hybrid web application using:
 
-To help you get used to the new way of doing things, this boilerplate "batteries included" application demonstrates how to build and deploy a complete modern, hybrid web application using a:
 * [Ruby on Rails](http://edgeguides.rubyonrails.org/5_1_release_notes.html) 5.1 back-end
 * [React](https://facebook.github.io/react/) front-end
-* on the [Heroku](https://www.heroku.com/home) cloud application hosting platform.
+* the [Heroku](https://www.heroku.com/home) cloud application hosting platform
+* Heroku's new [continuous integration](https://devcenter.heroku.com/articles/heroku-ci) service (via a complete `app.json` file)
 
-It also demonstrates how to use a [Postgres](http://exponential.io/blog/2015/02/21/install-postgresql-on-mac-os-x-via-brew/) database, [Devise](https://github.com/plataformatec/devise) authentication, and the [ActiveAdmin](https://activeadmin.info) administrative interface. It is based on the [rails-5.1-react boilerplate](https://github.com/GiancarlosIO/rails5.1-react-boilerplate), which includes [SASS](sass css) for CSS and [JBuilder](https://github.com/rails/jbuilder) for JSON.
+It also includes demonstrates using:
+
+* [Postgres](http://exponential.io/blog/2015/02/21/install-postgresql-on-mac-os-x-via-brew/) database
+* [Devise](https://github.com/plataformatec/devise) authentication
+* [ActiveAdmin](https://activeadmin.info) administrative interface
+
+It is based on the [rails-5.1-react boilerplate](https://github.com/GiancarlosIO/rails5.1-react-boilerplate), which includes:
+
+* [SASS](sass css) for CSS
+* [JBuilder](https://github.com/rails/jbuilder) for JSON
 
 # Prerequisites
 
@@ -26,18 +38,21 @@ $ yarn install -g node-gyp
 $ bundle install
 $ yarn install
 ```
+
 # Database Creation
 
-You shoud specify your own `appuser`, `PASSWORD`, and `dbname`.
+You **MUST** first set the initial admin credentials in `config/seeds.rb`.
+Note that you usually need to manually create the Postgres database and initial user.
+You should specify your own values for `appuser`, `DBPassword`, and `dbname`.
 
 ```
+$ vi config/seeds.rb # set default user with vi or your favorite text editor
 $ brew install postgresql
 # Follow instructions to auto-launch postgresql
-$ export DATABASE_URL="postgres://appuser:PASSWORD@localhost/dbname"
-$ initdb /usr/local/var/postgres -E utf8 -U appuser # May vary if not Homebrew
+$ export DATABASE_URL="postgres://appuser:DBPassword@localhost/dbname"
+$ initdb /usr/local/var/postgres -E utf8 -U appuser # May vary if not using Homebrew
 $ rake db:create db:migrate db:setup
 ```
-Note that you may need to manually create the Postgres database or initial user.
 
 # Launch
 ```
@@ -52,7 +67,11 @@ $ heroku buildpacks:add heroku/ruby
 ```
 # Personalize
 
-To use this for your own application
+To use this for your own application:
+
+* Globally replace "MyRailsReactApp" in all files with the name of your application
+* Review `package.json` and update with your own `repository` and `keywords`
+
 
 # Troubleshoot
 ```

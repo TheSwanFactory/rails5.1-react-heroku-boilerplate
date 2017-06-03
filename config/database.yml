@@ -17,7 +17,7 @@
 # This configuration expects all the database information to be set via
 # an environment variable, the same way Heroku expects it:
 #
-# export DATABASE_URL="postgres://appuser:PASSWORD@localhost/dbname"
+# $ export DATABASE_URL="postgres://appuser:DBPassword@localhost/dbname"
 #
 
 default: &default
@@ -43,20 +43,20 @@ test:
 
   # Other options (unused)
 
+  #host: localhost
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
   # domain sockets, so uncomment these lines.
-  #host: localhost
 
+  #port: 5432
   # The TCP port the server listens on. Defaults to 5432.
   # If your server runs on a different port number, change accordingly.
-  #port: 5432
 
+  #schema_search_path: MyRailsReactApp,sharedapp,public
   # Schema search path. The server defaults to $user,public
-  #schema_search_path: higher,sharedapp,public
 
+  #min_messages: notice
   # Minimum log levels, in increasing order:
   #   debug5, debug4, debug3, debug2, debug1,
   #   log, notice, warning, error, fatal, and panic
   # Defaults to warning.
-  #min_messages: notice
