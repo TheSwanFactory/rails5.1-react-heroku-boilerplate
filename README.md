@@ -64,6 +64,7 @@ $ rake db:create db:migrate db:setup
 # Launch
 ```
 $ rake test
+$ yarn test
 $ rake webpacker:compile
 $ bin/webpack-dev-server &
 $ rails server &
