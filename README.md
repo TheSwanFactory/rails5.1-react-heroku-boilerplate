@@ -35,7 +35,7 @@ From inside the app folder:
 
 ```
 $ brew install node
-$ brew install yarn
+$ brew install yarn # or `yarn upgrade` if already present
 $ yarn install -g node-gyp
 $ bundle install
 $ yarn install
