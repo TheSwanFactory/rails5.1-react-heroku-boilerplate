@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+# To bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.0'
 # Use pg for compatibility with Heroku
 gem 'pg'
@@ -32,15 +32,17 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Devise for Authentication
-
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'omniauth-facebook'
 gem 'omniauth-google'
 
+# Use ActiveAdmin as a generic interface for all your models
 gem 'activeadmin', github: 'activeadmin'
 
 group :development, :test do
+  # Store DATABASE_URL and other envars in a file
+  gem 'dotenv-rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
