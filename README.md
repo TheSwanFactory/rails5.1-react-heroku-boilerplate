@@ -23,13 +23,15 @@ It is based on the [rails-5.1-react boilerplate](https://github.com/GiancarlosIO
 * [JBuilder](https://github.com/rails/jbuilder) for JSON
 
 # Prerequisites
-
+* Git (usually installed as part of your system's developer tools)
+* Cloning this package from GitHub (we recommend using [GitHub Desktop](https://desktop.github.com))
 * The latest Ruby e.g., 2.4 (we recommend you install it via [RVM](https://rvm.io))
 * A package manager (we use [Homebrew](https://brew.sh) on the Mac)
 * A [free Heroku account](https://signup.heroku.com)
 * The [Heroku command-line](https://devcenter.heroku.com/articles/heroku-cli)
 
 # System Installation
+From inside the app folder:
 
 ```
 $ brew install node
@@ -43,14 +45,19 @@ $ yarn install
 
 You **MUST** first set the initial admin credentials in `config/seeds.rb`.
 Note that you usually need to manually create the Postgres database and initial user.
-You should specify your own values for `appuser`, `DBPassword`, and `dbname`.
+You should also specify your own values for `appuser`, `DBPassword`, and `dbname`.
+
+NOTE: If you are already using Postgres on your machine, you can skip the `install` and `initdb`
+steps, but will need to manually create the `appuser` role using, e.g., `psql`.
 
 ```
 $ vi config/seeds.rb # set default user with vi or your favorite text editor
 $ brew install postgresql
 # Follow instructions to auto-launch postgresql
-$ export DATABASE_URL="postgres://appuser:DBPassword@localhost/dbname"
 $ initdb /usr/local/var/postgres -E utf8 -U appuser # May vary if not using Homebrew
+$ cat > .env # store local envars to match Heroku config
+DATABASE_URL="postgres://appuser:DBPassword@localhost/dbname"
+^D
 $ rake db:create db:migrate db:setup
 ```
 
@@ -67,9 +74,9 @@ $ heroku buildpacks:add heroku/ruby
 ```
 # Personalize
 
-To use this for your own application:
+To use this for YourOwnRailsAppName:
 
-* Globally replace "MyRailsReactApp" in all files with the name of your application
+* Globally replace "MyRailsReactApp" with YourOwnRailsAppName
 * Review `package.json` and update with your own `repository` and `keywords`
 
 
