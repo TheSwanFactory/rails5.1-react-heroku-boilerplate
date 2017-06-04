@@ -22,7 +22,7 @@ It is based on the [rails-5.1-react boilerplate](https://github.com/GiancarlosIO
 * [SASS](sass css) for CSS
 * [JBuilder](https://github.com/rails/jbuilder) for JSON
 
-# Prerequisites
+## Prerequisites
 * Git (usually installed as part of your system's developer tools)
 * Cloning this package from GitHub (we recommend using [GitHub Desktop](https://desktop.github.com))
 * The latest Ruby e.g., 2.4 (we recommend you install it via [RVM](https://rvm.io))
@@ -30,7 +30,7 @@ It is based on the [rails-5.1-react boilerplate](https://github.com/GiancarlosIO
 * A [free Heroku account](https://signup.heroku.com)
 * The [Heroku command-line](https://devcenter.heroku.com/articles/heroku-cli)
 
-# System Installation
+## System Installation
 From inside the app folder:
 
 ```
@@ -61,19 +61,24 @@ DATABASE_URL="postgres://appuser:DBPassword@localhost/dbname"
 $ rake db:create db:migrate db:setup
 ```
 
-# Launch
+## Launch
 ```
 $ rake test
 $ yarn test
 $ rake webpacker:compile
 $ bin/webpack-dev-server &
 $ rails server &
-$ open [http://localhost:3000](http://localhost:3000)
-$
+$ open http://localhost:3000
+```
+
+## Deploy
+```
 $ heroku buildpacks:add --index 1 heroku/nodejs
 $ heroku buildpacks:add heroku/ruby
+$ heroku push
+$ heroku open
 ```
-# Personalize
+## Personalize
 
 To use this for YourOwnRailsAppName:
 
@@ -81,7 +86,7 @@ To use this for YourOwnRailsAppName:
 * Review `package.json` and update with your own `repository` and `keywords`
 
 
-# Troubleshoot
+## Troubleshoot
 ```
 $ rake --tasks
 $ rake webpacker:verify_install
