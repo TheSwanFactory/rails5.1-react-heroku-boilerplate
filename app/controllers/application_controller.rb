@@ -8,7 +8,6 @@ class ApplicationController < ActionController::Base
 #    current_user.try(:admin?)
 #  end
 
-# https://github.com/code-mancers/rapidfire/blob/master/README.md
   def can_administer?
     true
   end

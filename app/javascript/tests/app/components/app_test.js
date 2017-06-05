@@ -18,6 +18,6 @@ function setup() {
 describe('App Component', () => {
   it('app should render', () => {
     const { enzymeWrapper } = setup();
-    expect(enzymeWrapper).to.have.text('Rails 5.1 - React 15.5 Boilerplate');
+    expect(enzymeWrapper).to.have.text('Welcome to MyRailsReactApp');
   });
 });
