@@ -1,12 +1,4 @@
 GIT
-  remote: https://github.com/TheHigher/rapidfire.git
-  revision: eb5a54e956a4d1c2baa5058a19a1de3b8a7a5a1f
-  specs:
-    rapidfire (3.0.0)
-      active_model_serializers (~> 0.8.1)
-      rails (>= 3.2.13)
-
-GIT
   remote: https://github.com/activeadmin/activeadmin.git
   revision: 8f7f58016802cd5a7f663fbc80b90b884252f939
   specs:
@@ -51,8 +43,6 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
-    active_model_serializers (0.8.3)
-      activemodel (>= 3.0)
     activejob (5.1.1)
       activesupport (= 5.1.1)
       globalid (>= 0.3.6)
@@ -111,6 +101,10 @@ GEM
       railties (>= 4.1.0, < 5.2)
       responders
       warden (~> 1.2.3)
+    dotenv (2.2.1)
+    dotenv-rails (2.2.1)
+      dotenv (= 2.2.1)
+      railties (>= 3.2, < 5.2)
     erubi (1.6.0)
     execjs (2.7.0)
     faraday (0.11.0)
@@ -324,6 +318,7 @@ DEPENDENCIES
   capybara (~> 2.13.0)
   coffee-rails (~> 4.2)
   devise
+  dotenv-rails
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   omniauth-facebook
@@ -331,7 +326,6 @@ DEPENDENCIES
   pg
   puma (~> 3.7)
   rails (~> 5.1.0)
-  rapidfire!
   sass-rails (~> 5.0)
   selenium-webdriver
   spring

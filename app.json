@@ -1,6 +1,6 @@
 {
-  "name": "HIGHER Performance",
-  "description": "HIGHER Technology's Human Performance Survey",
+  "name": "MyRailsReactApp",
+  "description": "Run MyRailsReactApp on Heroku",
   "addons": ["heroku-postgresql:hobby-dev"],
   "env": {
     "RAILS_ENV": "production"

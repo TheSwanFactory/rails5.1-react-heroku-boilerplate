@@ -5,4 +5,4 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-AdminUser.create!(email: 'ernie@TheHigher.net', password: 'ServeTheLord', password_confirmation: 'ServeTheLord')
+AdminUser.create!(email: 'appuser@MyRailsReactApp.io', password: 'MyRailsReactAppPassword', password_confirmation: 'MyRailsReactAppPassword')
