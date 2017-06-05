@@ -68,6 +68,7 @@ $ yarn test
 $ rake webpacker:compile
 $ bin/webpack-dev-server &
 $ rails server &
+# wait until those servers finish launching
 $ open http://localhost:3000
 ```
 
