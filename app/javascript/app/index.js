@@ -22,7 +22,7 @@ export const store = createStore(RootReducers, {}, componseEnhancers(
   applyMiddleware(ReduxThunk)
 ));
 
-// for debuggin
+// for debugging
 // window.store = store;
 
 document.addEventListener('DOMContentLoaded', () => {

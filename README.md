@@ -69,7 +69,7 @@ $ rake webpacker:compile
 $ bin/webpack-dev-server &
 $ rails server &
 # wait until those servers finish launching
-$ open http://localhost:3000
+$ sleep 10 && open http://localhost:3000
 ```
 
 ## Deploy
