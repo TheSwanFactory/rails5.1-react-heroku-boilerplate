@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import App from '../components/app';
 import NotFound from '../components/public-pages/not-found';
 
-
 export default (
   <Router>
     <Switch>
