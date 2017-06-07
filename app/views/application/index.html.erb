@@ -3,10 +3,13 @@
 <div id="content">
   <p> <a href="https://medium.com/@hpux/rails-5-1-loves-javascript-a1d84d5318b">Rails 5.1</a> breaks new ground in provided integrated support for JavaScript within a Ruby on Rails application.  However, that support comes with additional complexity and changes from prior ways of managing JavaScript.
 
-  To help you get used to the new way of doing things, this boilerplate "batteries included" application demonstrates how to build and deploy a complete modern, hybrid web application using Rails 5.1, React, and Heroku.
-<p>
+  To help you get used to the new way of doing things, this boilerplate "batteries included" application demonstrates how to build and deploy a complete modern, hybrid web application using Rails 5.1, React, and Heroku, including an ActiveAdmin console and Devise authentication.
+  </p>
   <p>From this page you can:</p>
   <ul>
-    <li>Login as an <a href="./admin">Administrator</a></li>
-  </ul
+    <li> <%= link_to("Login", new_admin_user_session_path) %> as an Administrator</a></li>
+    <li> <%= link_to("Review", admin_admin_users_path) %> ActiveAdmin Users</a></li>
+    <li> <%= link_to("Logout", destroy_admin_user_session_path) %> from Devise</a></li>
+  </ul>
+  <p>Note that you will need a seperate Devise configuration for non-Admin users.</p>
 </div>

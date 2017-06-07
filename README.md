@@ -43,7 +43,7 @@ $ yarn install
 
 # Database Creation
 
-You **MUST** first set the initial admin credentials in `config/seeds.rb`.
+You **MUST** first set the initial admin credentials in `config/db/seeds.rb`.
 Note that you usually need to manually create the Postgres database and initial user.
 You should also specify your own values for `appuser`, `DBPassword`, and `dbname`.
 
@@ -51,7 +51,7 @@ NOTE: If you are already using Postgres on your machine, you can skip the `insta
 steps, but will need to manually create the `appuser` role using, e.g., `psql`.
 
 ```
-$ vi config/seeds.rb # set default user with vi or your favorite text editor
+$ vi config/db/seeds.rb # set default user with vi or your favorite text editor
 $ brew install postgresql
 # Follow instructions to auto-launch postgresql
 $ initdb /usr/local/var/postgres -E utf8 -U appuser # May vary if not using Homebrew
