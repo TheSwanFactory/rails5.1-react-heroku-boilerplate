@@ -37,7 +37,7 @@ From inside the app folder:
 $ brew install node
 $ brew install yarn # or `yarn upgrade` if already present
 $ yarn install -g node-gyp
-$ bundle install
+$ bundle install # Uncomment Gemfile `tzinfo-data` if on Windows
 $ yarn install
 ```
 
@@ -66,6 +66,7 @@ $ rake db:create db:migrate db:setup
 $ rake test
 $ yarn test
 $ rake webpacker:compile
+$ RAILS_ENV=production SECRET_KEY_BASE=123 bundle exec rails assets:precompile
 $ bin/webpack-dev-server &
 $ rails server &
 # wait until those servers finish launching
@@ -74,9 +75,13 @@ $ sleep 10 && open http://localhost:3000
 
 ## Deploy
 ```
+$ heroku login
+# Enter your credentials from https://signup.heroku.com
+$ heroku apps:create my-rails-react-app # use your app name
 $ heroku buildpacks:add --index 1 heroku/nodejs
 $ heroku buildpacks:add heroku/ruby
-$ heroku push
+$ git commit # Ensure repository is up to date
+$ git push heroku master
 $ heroku open
 ```
 ## Personalize

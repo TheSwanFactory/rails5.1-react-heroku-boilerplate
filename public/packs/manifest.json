@@ -1,8 +1,5 @@
 {
-  "app.js": "http://localhost:8080/packs/app.js",
-  "app.js.map": "http://localhost:8080/packs/app.js.map",
-  "application.js": "http://localhost:8080/packs/application.js",
-  "application.js.map": "http://localhost:8080/packs/application.js.map",
-  "hello_react.js": "http://localhost:8080/packs/hello_react.js",
-  "hello_react.js.map": "http://localhost:8080/packs/hello_react.js.map"
+  "app.js": "/packs/app-e8b0b1a22731be781bfc.js",
+  "application.js": "/packs/application-dce8cb4262334a60eba6.js",
+  "hello_react.js": "/packs/hello_react-eafaee85c22101ef2457.js"
 }
