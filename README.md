@@ -61,12 +61,26 @@ DATABASE_URL="postgres://appuser:DBPassword@localhost/dbname"
 $ rake db:create db:migrate db:setup
 ```
 
+## Secrets
+Instead of environment variables, we use the new encrypted secrets from Rails 5.1.
+This is important to configure properly, otherwise you will get weird error messages
+about assets not pre-compiling on Heroku!
+```
+$ rails secrets:setup
+# Store that generated key in a secure password manager, or you will lose it forever!
+$ rake secret | pbcopy # generate long hex string, store in copy-paste buffer
+$ EDITOR=vim bin/rails secrets:edit
+production:
+  <paste string from above>
+# :wq to quit
+```
+
+
 ## Launch
 ```
 $ rake test
 $ yarn test
 $ rake webpacker:compile
-$ RAILS_ENV=production SECRET_KEY_BASE=123 bundle exec rails assets:precompile
 $ bin/webpack-dev-server &
 $ rails server &
 # wait until those servers finish launching
@@ -80,6 +94,7 @@ $ heroku login
 $ heroku apps:create my-rails-react-app # use your app name
 $ heroku buildpacks:add --index 1 heroku/nodejs
 $ heroku buildpacks:add heroku/ruby
+$ RAILS_ENV=production SECRET_KEY_BASE=123 bundle exec rails assets:precompile
 $ git commit # Ensure repository is up to date
 $ git push heroku master
 $ heroku open
