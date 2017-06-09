@@ -73,6 +73,7 @@ $ EDITOR=vim bin/rails secrets:edit
 production:
   <paste string from above>
 # :wq to quit
+$ git commit # store encrypted file in repo
 ```
 
 
@@ -94,8 +95,7 @@ $ heroku login
 $ heroku apps:create my-rails-react-app # use your app name
 $ heroku buildpacks:add --index 1 heroku/nodejs
 $ heroku buildpacks:add heroku/ruby
-$ RAILS_ENV=production SECRET_KEY_BASE=123 bundle exec rails assets:precompile
-$ git commit # Ensure repository is up to date
+$ heroku config:set RAILS_MASTER_KEY=`cat config/secrets.yml.key`
 $ git push heroku master
 $ heroku open
 ```
