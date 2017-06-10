@@ -73,6 +73,8 @@ $ EDITOR=vim bin/rails secrets:edit
 production:
   <paste string from above>
 # :wq to quit
+# Test it is configured properly:
+$ RAILS_ENV=production bin/rails assets:precompile
 $ git commit # store encrypted file in repo
 ```
 
