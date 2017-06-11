@@ -68,12 +68,13 @@ about assets not pre-compiling on Heroku!
 ```
 $ rails secrets:setup
 # Store that generated key in a secure password manager, or you will lose it forever!
-$ rake secret | pbcopy # generate long hex string, store in copy-paste buffer
+$ rake secret | pbcopy # generate long hex string, store in copy-paste buffer (Mac)
+$ heroku config:set SECRET_KEY_BASE=`pbpaste`
 $ EDITOR=vim bin/rails secrets:edit
 production:
   <paste string from above>
 # :wq to quit
-# Test it is configured properly:
+# Test if it is configured properly:
 $ RAILS_ENV=production bin/rails assets:precompile
 $ git commit # store encrypted file in repo
 ```
