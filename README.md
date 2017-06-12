@@ -37,7 +37,7 @@ From inside the app folder:
 $ brew install node
 $ brew install yarn # or `yarn upgrade` if already present
 $ yarn install -g node-gyp
-$ bundle install
+$ bundle install # Uncomment Gemfile `tzinfo-data` if on Windows
 $ yarn install
 ```
 
@@ -61,6 +61,25 @@ DATABASE_URL="postgres://appuser:DBPassword@localhost/dbname"
 $ rake db:create db:migrate db:setup
 ```
 
+## Secrets
+Instead of environment variables, we use the new encrypted secrets from Rails 5.1.
+This is important to configure properly, otherwise you will get weird error messages
+about assets not pre-compiling on Heroku!
+```
+$ rails secrets:setup
+# Store that generated key in a secure password manager, or you will lose it forever!
+$ rake secret | pbcopy # generate long hex string, store in copy-paste buffer (Mac)
+$ heroku config:set SECRET_KEY_BASE=`pbpaste`
+$ EDITOR=vim bin/rails secrets:edit
+production:
+  <paste string from above>
+# :wq to quit
+# Test if it is configured properly:
+$ RAILS_ENV=production bin/rails assets:precompile
+$ git commit # store encrypted file in repo
+```
+
+
 ## Launch
 ```
 $ rake test
@@ -74,9 +93,13 @@ $ sleep 10 && open http://localhost:3000
 
 ## Deploy
 ```
+$ heroku login
+# Enter your credentials from https://signup.heroku.com
+$ heroku apps:create my-rails-react-app # use your app name
 $ heroku buildpacks:add --index 1 heroku/nodejs
 $ heroku buildpacks:add heroku/ruby
-$ heroku push
+$ heroku config:set RAILS_MASTER_KEY=`cat config/secrets.yml.key`
+$ git push heroku master
 $ heroku open
 ```
 ## Personalize
